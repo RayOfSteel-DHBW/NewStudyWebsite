@@ -1,0 +1,174 @@
+/* 1) Reset default margins/paddings */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2) Body fills the viewport; fix the background image */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* Background image setup */
+  background-image: url('https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: Arial, sans-serif;
+}
+
+/* 3) Navigation bar fixed at the top */
+nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  height: 60px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+  z-index: 999;
+}
+
+nav .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+/* Make nav links look like clickable items */
+nav ul li a,
+.nav-button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a:hover,
+.nav-button:hover {
+  color: #ffa500;
+}
+
+/* 4) Home section: fill the viewport */
+#home-section {
+  min-height: 100vh;
+  /* This ensures the background or container fills the page. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Make sure container is centered within that viewport space */
+#container {
+  /* Remove padding-top: 60px if you're handling it at #home-section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 5) Main content box for the home section */
+#content-box {
+  width: 30vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* NextButton */
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #ff4d4d;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e74c3c;
+}
+
+/* 7) Additional Content Boxes - hidden by default, slide in on scroll */
+.content-section {
+  /* Large centered box with golden ratio width ~ 61.8% */
+  width: 61vw; /* Matches new size */
+  height: 50vh; /* Matches new size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10vh auto; /* Adds spacing for scroll effect */
+  padding: 20px;
+  flex-direction: column;
+
+  /* Similar style as #content-box */
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+  color: #333;
+}
+
+/* Start hidden and slightly "below" (or you could do left/right) */
+.hidden {
+  opacity: 0;
+  transform: translateY(20vh); /* Move from below */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When visible, transition to fully visible, no offset */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional smooth scrolling for in-page anchor links */
+html {
+  scroll-behavior: smooth;
+}
