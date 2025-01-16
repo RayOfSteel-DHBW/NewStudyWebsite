@@ -1,16 +1,16 @@
-/* Reset and basic styling */
+/* 1) Basic Reset/Structure */
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
-/* 
-  Use scroll-snap on Y-axis, 
-  'mandatory' forces each .snap-section to snap precisely.
-*/
+/* 2) Smooth scrolling for any JS or anchor-based scrolls */
+html {
+  scroll-behavior: smooth; 
+}
+
+/* 3) Body styling (background, font, etc.) */
 body {
-  scroll-snap-type: y mandatory;
   overflow-y: scroll;
   font-family: Arial, sans-serif;
   background-image: url('https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg');
@@ -18,12 +18,18 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  font-family: Arial, sans-serif;
   color: #fff;
 }
 
-/* Navigation bar */
+/* 4) Snap-section no longer needs 'scroll-snap-align', but keep min-height for full-screen sections */
+.snap-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 5) Navigation bar */
 nav {
   position: fixed;
   top: 0; 
@@ -58,21 +64,26 @@ nav ul li a:hover {
   color: #ffa500;
 }
 
-/* Scroll snapping each section to center of viewport */
-.snap-section {
-  scroll-snap-align: center;
-  min-height: 100vh; /* so each section has full screen height */
+/* 6) Center an image within .center-image container */
+.center-image {
   display: flex;
-  align-items: center;
   justify-content: center;
-  /* optional - you can experiment with padding-top if needed */
+  margin: 20px auto;
+  max-width: 80%;
+  max-height: 30vw;
+  background: transparent;
+}
+.center-image img {
+  max-width: 100%;
+  height: auto;
 }
 
+/* 7) Content box styling */
 .content-box {
   background: #fff;
   color: #333;
-  width: 60vw;
-  min-height: 70vh;
+  width: 60%;
+  height: 70%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   display: flex;
@@ -82,23 +93,21 @@ nav ul li a:hover {
   overflow: hidden;
 }
 
-
 .title-area {
   flex: 0 0 auto; /* No growth/shrinking */
-  border-bottom: 1px solid #ccc; /* Optional decorative line */
-  background-color: #f9f9f9; /* Optional background for contrast */
-  padding: 0; /* Padding handled by .title-text */
+  border-bottom: 1px solid #ccc; 
+  background-color: #f9f9f9; 
+  padding: 0; 
 }
 
 .title-text {
-  font-size: 2rem; /* Large font size */
-  font-weight: bold; /* Bold font */
-  text-align: left; /* Left-aligned */
-  padding: 10px; /* Add some padding around */
-  margin: 0; /* Remove any default margins */
-  color: #333; /* Darker text color for readability */
+  font-size: 2rem; 
+  font-weight: bold; 
+  text-align: left; 
+  padding: 10px; 
+  margin: 0; 
+  color: #333; 
 }
-
 
 .main-content {
   flex: 1;
@@ -106,8 +115,6 @@ nav ul li a:hover {
   padding: 20px;
 }
 
-
-/* Button area: anchored at the bottom center */
 .button-area {
   flex: 0 0 auto;
   text-align: center;
@@ -115,7 +122,7 @@ nav ul li a:hover {
   border-top: 1px solid #ccc;
 }
 
-/* Styling the button */
+/* 8) Button styling */
 button {
   border: none;
   padding: 10px 20px;
@@ -130,7 +137,7 @@ button:hover {
   background: #e74c3c;
 }
 
-/* Responsive tweak for narrower screens */
+/* 9) Responsive tweaks */
 @media (max-width: 600px) {
   .content-box {
     width: 80vw;
