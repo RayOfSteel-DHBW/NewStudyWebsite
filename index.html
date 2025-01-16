@@ -3,46 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About me! Assignment</title>
-  <!-- Link to your external stylesheet -->
+  <title>About Me! Assignment</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js"></script>
+  <script src="PageNavigator.js"></script>
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav>
     <div class="logo">WebEngineering - Rainer Stahl</div>
     <ul>
-      <li><a href="#home">Start</a></li>
+      <li><a href="#home-section">Start</a></li>
       <li><a href="#about">Introduction</a></li>
       <li><a href="#contact">Contact</a></li>
-      </li>
     </ul>
   </nav>
 
   <!-- FIRST PAGE -->
-<div id="home-section">
-  <div id="container">
+  <div id="home-section">
     <div id="content-box">
       <h1>Hello, NewStudy!</h1>
+      <!-- Same scroll-button class as the others -->
       <button class="scroll-button">Press to Start!!</button>
     </div>
   </div>
-</div>
 
-<!-- ADDITIONAL CONTENT BOXES -->
-<div id="about" class="content-section hidden">
-  <h2>About Me</h2>
-  <p>I am a mysterious developer who loves fancy minimalistic designs!</p>
-  <button class="scroll-button">Jump to exercises</button>
-</div>
+  <!-- ADDITIONAL CONTENT BOXES -->
+  <div id="about" class="content-section hidden">
+    <h2>About Me</h2>
+    <p>I am a developer who loves fancy minimalistic designs!</p>
+    <button class="scroll-button">Jump to Contact</button>
+  </div>
 
-<div id="contact" class="content-section hidden">
-  <h2>Contact</h2>
-  <p>Feel free to reach out via email: <strong>fancy@site.com</strong></p>
-</div>
+  <div id="contact" class="content-section hidden">
+    <h2>Contact</h2>
+    <p>Feel free to reach out via email: <strong>inf24020@lehre.dhbw-student.de</strong></p>
+    <button class="scroll-button">No More Sections</button> <!-- Will be hidden in JS -->
+  </div>
 
-
-  <!-- JavaScript file -->
-  <script src="scripts.js"></script>
+  
 </body>
 </html>

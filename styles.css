@@ -5,7 +5,7 @@ html, body {
   box-sizing: border-box;
 }
 
-/* 2) Body fills the viewport; fix the background image */
+/* 2) Body with full height; background image is fixed */
 body {
   min-height: 100vh;
   display: flex;
@@ -28,9 +28,7 @@ nav {
   height: 60px;
 
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
 
   display: flex;
   justify-content: space-between;
@@ -53,11 +51,6 @@ nav ul {
   gap: 20px;
 }
 
-nav ul li {
-  display: inline;
-}
-
-/* Make nav links look like clickable items */
 nav ul li a,
 .nav-button {
   color: #fff;
@@ -67,8 +60,6 @@ nav ul li a,
   border: none;
   background: none;
   cursor: pointer;
-  padding: 0;
-  margin: 0;
 }
 
 nav ul li a:hover,
@@ -76,35 +67,26 @@ nav ul li a:hover,
   color: #ffa500;
 }
 
-/* 4) Home section: fill the viewport */
+/* 4) Home section: fill the viewport; center its contents */
 #home-section {
-  min-height: 100vh;
-  /* This ensures the background or container fills the page. */
+  min-height: 100vh; /* fills entire viewport */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 60px; /* ensures content isn't behind the fixed navbar */
 }
 
-
-/* Make sure container is centered within that viewport space */
-#container {
-  /* Remove padding-top: 60px if you're handling it at #home-section */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* 5) Main content box for the home section */
+/* 5) Main content box in the home section */
 #content-box {
   width: 30vw;
-  height: 30vh;
+  min-height: 30vh;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
+
   padding: 20px;
   background: rgba(255, 255, 255, 1);
   border-radius: 10px;
@@ -116,7 +98,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-/* NextButton */
+/* Buttons */
 button {
   padding: 10px 20px;
   margin-top: 10px;
@@ -134,41 +116,38 @@ button:hover {
   background-color: #e74c3c;
 }
 
-/* 7) Additional Content Boxes - hidden by default, slide in on scroll */
+/* 6) Additional Content Sections: hidden by default, revealed on scroll */
 .content-section {
-  /* Large centered box with golden ratio width ~ 61.8% */
-  width: 61vw; /* Matches new size */
-  height: 50vh; /* Matches new size */
+  /* Let height expand naturally to fit content by removing fixed 50vh. */
+  width: 61vw;
+  margin: 5vh auto; /* a bit less margin so the section is more visible */
+  padding: 40px;    /* more comfortable padding */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10vh auto; /* Adds spacing for scroll effect */
-  padding: 20px;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-  /* Similar style as #content-box */
   background: rgba(255, 255, 255, 1);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  text-align: center;
   color: #333;
 }
 
-/* Start hidden and slightly "below" (or you could do left/right) */
+/* Hidden state: starts invisible and shifted downward */
 .hidden {
   opacity: 0;
-  transform: translateY(20vh); /* Move from below */
+  transform: translateY(20vh);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* When visible, transition to fully visible, no offset */
+/* Become fully visible when .visible is added */
 .visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Optional smooth scrolling for in-page anchor links */
+/* Optional smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
 }
