@@ -3,44 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me! Assignment</title>
+  <title>About me! Assignment</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="scripts.js"></script>
-  <script src="PageNavigator.js"></script>
+  <script src="PageNavigator.js" defer></script>
 </head>
 <body>
-  <!-- Navigation Bar -->
   <nav>
     <div class="logo">WebEngineering - Rainer Stahl</div>
     <ul>
-      <li><a href="#home-section">Start</a></li>
+      <li><a href="#home">Start</a></li>
       <li><a href="#about">Introduction</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- FIRST PAGE -->
-  <div id="home-section">
-    <div id="content-box">
-      <h1>Hello, NewStudy!</h1>
-      <!-- Same scroll-button class as the others -->
-      <button class="scroll-button">Press to Start!!</button>
+  <section id="home" class="snap-section">
+    <div class="content-box">
+      <div class="title-area">
+        <!-- First Box Title Updated Here -->
+        <div class="title-text">Web Engineering - Demo Site</div>
+      </div>
+      <div class="main-content">
+        <!-- Put your own content here -->
+        <p>Welcome to my Web Engineering Demo Site. <br> Let me introduce my solution...</p>
+      </div>
+      <div class="button-area">
+        <button class="scroll-button">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="practice-1-intro" class="snap-section">
+  <div class="content-box">
+    <div class="title-area">
+      <div class="title-text">Practice 1</div>
+    </div>
+    <div class="main-content">
+      <h2>Introduction</h2>
+      <p>My name is Rainer, I'm 0x20 years old and I'm a computer science student from Germany.</p>
+    </div>
+    <div class="button-area">
+      <button class="scroll-button">Next</button>
     </div>
   </div>
-
-  <!-- ADDITIONAL CONTENT BOXES -->
-  <div id="about" class="content-section hidden">
-    <h2>About Me</h2>
-    <p>I am a developer who loves fancy minimalistic designs!</p>
-    <button class="scroll-button">Jump to Contact</button>
+</section>
+<section id="practice-1-hobbies" class="snap-section">
+  <div class="content-box">
+    <div class="title-area">
+      <div class="title-text">Practice 1</div>
+    </div>
+    <div class="main-content">
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Video Games</li>
+        <li>Hiking</li>
+        <li>Philosophy</li>
+      </ul>
+    </div>
+    <div class="button-area">
+      <button class="scroll-button">Next</button>
+    </div>
   </div>
+</section>
 
-  <div id="contact" class="content-section hidden">
-    <h2>Contact</h2>
-    <p>Feel free to reach out via email: <strong>inf24020@lehre.dhbw-student.de</strong></p>
-    <button class="scroll-button">No More Sections</button> <!-- Will be hidden in JS -->
+<section id="practice-1-books" class="snap-section">
+  <div class="content-box">
+    <div class="title-area">
+      <div class="title-text">Practice 1</div>
+    </div>
+    <div class="main-content">
+      <h3>Favorite Books</h3>
+      <ol>
+        <li>Alice in Wonderland</li>
+        <li>The Amulet of Samarkand</li>
+        <li>The Dark Tower I: The Gunslinger</li>
+      </ol>
+    </div>
+    <div class="button-area">
+      <button class="scroll-button">Next</button>
+    </div>
   </div>
+</section>
 
-  
+<section id="practice-1-conclusion" class="snap-section">
+  <div class="content-box">
+    <div class="title-area">
+      <div class="title-text">Practice 1</div>
+    </div>
+    <div class="main-content">
+      <h3>Conclusion</h3>
+      <p>This is the end of practice 1, thank you for checking out my website!</p>
+    </div>
+    <div class="button-area">
+      <button class="scroll-button">No More</button>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact" class="snap-section">
+    <div class="content-box">
+      <div class="title-area">
+        <div class="title-text">Contact</div>
+      </div>
+      <div class="main-content">
+        <!-- Provide real or example contact info here -->
+        <p>inf24020@lehre.dhbw-student.de</p>
+      </div>
+      <div class="button-area">
+        <button class="scroll-button">No More</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+  <section id="extra-credit" class="snap-section">
+    <div class="content-box">
+      <div class="title-area">
+        <div class="title-text">Extra Credit</div>
+      </div>
+      <div class="main-content">
+        <h3>Extra Credit Details</h3>
+
+        <p><strong>Why I want extra credit:</strong></p>
+        <ul>
+          <li><em>Pride</em> – Achieving the best feels good!</li>
+          <li><u>Making up for missed due dates</u> – It happens to the best of us, right?</li>
+        </ul>
+
+        <p><strong>Reasons to approve this:</strong></p>
+        <ol>
+          <li>
+            It encourages me to stay engaged.
+            <ul>
+              <li><b>Motivation:</b> Small rewards can spark greater effort.</li>
+            </ul>
+          </li>
+          <li>
+            It's a great way to showcase creativity!
+            <ul>
+              <li><b>Style:</b> See how I highlight key points?</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p>Do I deserve it? <span style="font-size: larger; font-weight: bold; color: green;">Absolutely!</span></p>
+
+      </div>
+      <div class="button-area">
+        <button class="scroll-button">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="snap-section">
+    <div class="content-box">
+      <div class="title-area">
+        <div class="title-text">Contact</div>
+      </div>
+      <div class="main-content">
+        <p>inf24020@lehre.dhbw-student.de</p>
+      </div>
+      <div class="button-area">
+        <button class="scroll-button">No More</button>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
