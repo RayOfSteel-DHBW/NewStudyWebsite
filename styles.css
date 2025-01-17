@@ -1,15 +1,7 @@
-/* 1) Basic Reset/Structure */
 html, body {
   margin: 0;
   padding: 0;
 }
-
-/* 2) Smooth scrolling for any JS or anchor-based scrolls */
-html {
-  scroll-behavior: smooth; 
-}
-
-/* 3) Body styling (background, font, etc.) */
 body {
   overflow-y: scroll;
   font-family: Arial, sans-serif;
@@ -21,9 +13,8 @@ body {
   color: #fff;
 }
 
-/* 4) Snap-section no longer needs 'scroll-snap-align', but keep min-height for full-screen sections */
 .snap-section {
-  min-height: 100vh;
+  min-height: 100vh; /* Forces 1 view port height to get paginated feel */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +55,7 @@ nav ul li a:hover {
   color: #ffa500;
 }
 
-/* 6) Center an image within .center-image container */
+/* Center DHBW Image */
 .center-image {
   display: flex;
   justify-content: center;
@@ -77,8 +68,6 @@ nav ul li a:hover {
   max-width: 100%;
   height: auto;
 }
-
-/* 7) Content box styling */
 .content-box {
   background: #fff;
   color: #333;
@@ -94,7 +83,7 @@ nav ul li a:hover {
 }
 
 .title-area {
-  flex: 0 0 auto; /* No growth/shrinking */
+  flex: 0 0 auto;
   border-bottom: 1px solid #ccc; 
   background-color: #f9f9f9; 
   padding: 0; 
@@ -136,10 +125,14 @@ button {
 button:hover {
   background: #e74c3c;
 }
-
-/* 9) Responsive tweaks */
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .content-box {
     width: 80vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .content-box {
+    width: 94vw;
   }
 }

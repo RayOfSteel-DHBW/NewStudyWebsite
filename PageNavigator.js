@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;        // Which section is currently visible
   let isSnapping = false;      // Are we currently snapping?
 
-  /**
-   * Helper to snap to a given section index.
-   */
+  /* Snap to given index */
   function snapToIndex(index) {
     if (index < 0 || index >= sections.length) {
       console.log(`Invalid snap index ${index}, ignoring.`);
@@ -30,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       currentIndex = index;
       isSnapping = false;
       console.log(`Snapped to index ${currentIndex}.`);
-    }, 800); // match the smooth scrolling duration
+    }, 600); // match the smooth scrolling duration
   }
 
   /**
