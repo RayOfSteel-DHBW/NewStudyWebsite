@@ -2,19 +2,6 @@ html {
     max-height: 100vh;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-list {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
 .hero-section {
     margin-top: 4rem;
@@ -34,7 +21,8 @@ html {
     font-size: 1.5rem;
     text-transform: uppercase;
     text-shadow: 0 0 5px var(--clr-secondary-neon);
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .hero-link {
@@ -55,13 +43,20 @@ html {
     filter: drop-shadow(0 0 15px var(--clr-primary-neon));
 }
 
-/* Style for the large title below the image */
+
 .site-title {
     font-family: var(--font-heading);
     font-size: 3rem;
     text-transform: uppercase;
     text-shadow: 0 0 8px var(--clr-primary-neon);
     margin: 1rem 0;
+}
+
+@media screen and (orientation: portrait) {
+    .site-title {
+        display: none;
+    }
+    
 }
 
 .tagline {
