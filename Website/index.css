@@ -1,51 +1,53 @@
-
-body {
-    display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, main, footer */
-    min-height: 100vh;                /* Full viewport height */
+html {
+    max-height: 100vh;
 }
 
-/* Header layout: brand on left, nav on right */
 .header-container {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Horizontal navigation list */
 .nav-list {
-    display: flex;         /* Lay nav items horizontally */
-    gap: 1.5rem;           /* Space between nav items */
-    list-style: none;      /* Remove bullet points */
-    margin: 0;             /* Reset default margin */
-    padding: 0;            /* Reset default padding */
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* Hero Section Layout */
 .hero-section {
-    margin-top: 4rem;  /* Space from the top to reveal gradient or header */
+    margin-top: 4rem;
     text-align: center;
+    max-height: 61vh;
 }
 
-/* Center hero content */
 .hero-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Existing hero styling */
-.hero {
-    text-align: center;
-    padding: 5rem 0;
+/* Style for the small title above the image */
+.hero-title h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px var(--clr-secondary-neon);
+    margin-bottom: 1rem;
 }
 
-/* Hero Image (skull) - updated for a larger display */
+.hero-link {
+    display: inline-block;
+}
+
 .hero-skull {
-    width: 400px; /* Updated width for a "large" image */
     max-width: 100%;
-    transition: transform 0.3s ease-in-out, filter 0.3s;
+    transition: transform 0.3s ease-in-out, filter 0.4s;
     margin-bottom: 1rem;
+    filter: drop-shadow(0 0 5px var(--clr-secondary-neon));
+    flex: 1 1 30%;
+    max-height: 61vh;
 }
 
 .hero-skull:hover {
@@ -53,27 +55,17 @@ body {
     filter: drop-shadow(0 0 15px var(--clr-primary-neon));
 }
 
-/* Link wrapper around the skull */
-.hero-link {
-    display: inline-block;
-}
-
-/* Hero Button */
-.hero-button {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
+/* Style for the large title below the image */
+.site-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
     text-transform: uppercase;
-    text-decoration: none;
-    color: var(--clr-bg);
-    background-color: var(--clr-primary-neon);
-    border-radius: 5px;
-    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    text-shadow: 0 0 8px var(--clr-primary-neon);
+    margin: 1rem 0;
 }
 
-.hero-button:hover {
-    background-color: var(--clr-secondary-neon);
-    box-shadow: 0 0 8px var(--clr-secondary-neon);
+.tagline {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: var(--clr-text);
 }

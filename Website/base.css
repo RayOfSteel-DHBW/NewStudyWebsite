@@ -8,14 +8,18 @@ body {
         rgba(99, 4, 23, 0.200) 130%
       ),
       var(--clr-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
   }
 
 :root {
-  --clr-bg: #0D0D0D;         /* Base background (dark) */
-  --clr-bg-alt: #1A1A1A;     /* Slightly lighter dark color for sections */
-  --clr-primary-neon: #FF073A; /* Neon red highlight */
-  --clr-secondary-neon: #00FFFF; /* Electric cyan highlight */
-  --clr-text: #F2F2F2;       /* Near-white text for readability */
+  --clr-bg: #0D0D0D;         
+  --clr-bg-alt: #1A1A1A;    
+  --clr-primary-neon: #FF073A; 
+  --clr-secondary-neon: #00FFFF; 
+  --clr-text: #F2F2F2;
 
   /* Fonts */
   --font-heading: "Orbitron", sans-serif;
@@ -49,9 +53,9 @@ body {
   line-height: 1.5;
 }
 
-
-
-*/
+html {
+    max-height: 100vh;
+}
 
 /* 3) Typography
    ----------------------------------------- */
@@ -181,4 +185,70 @@ table tr:hover {
   .container {
     width: 95%;
   }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--clr-bg-alt);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-md);
+  z-index: 999;
+}
+
+main {
+  flex: 1 0 auto;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: var(--clr-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.nav-list {
+    
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: var(--clr-bg-alt);
+  border: black 1px dotted;
+
+  overflow: hidden;
+  box-shadow: 4px 2px 5px #000; 
+  transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+}
+
+.nav-list li {
+  margin: 0; 
+}
+
+.nav-list a {
+  display: block;
+  background-color: var(--clr-bg-alt);
+  color: var(--clr-text);
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  box-shadow: 1px 0px 1px #000;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-list a:hover {
+  box-shadow: 1px 1px 0 #000;
+  transform: translate(1px, 1px);
 }
