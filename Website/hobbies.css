@@ -1,0 +1,47 @@
+/* Use a full viewport layout similar to index.html */
+.hobbies-section {
+  /* Reduce padding to allow more content in view */
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  /* Set minimum height so that header and footer fit without scrolling.
+     Adjust 100px below to match your header/footer heights. */
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Wrap the grouped blocks in a flex container */
+.hobbies-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Each block includes its heading and corresponding table */
+.hobbies-block {
+  flex: 1 1 45%;
+  min-width: 250px;
+  max-width: 600px;
+  margin: 1rem;
+}
+
+/* Center headings inside each block */
+.hobbies-block h2 {
+  text-align: center;
+}
+
+/* Tables take full width of their container */
+.hobbies-block table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Adjust introductory paragraph if needed */
+.hobbies-section p {
+  max-width: 700px;
+  margin: 1rem auto 2rem;
+}
+

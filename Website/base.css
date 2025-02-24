@@ -196,14 +196,13 @@
     box-shadow: 1px 1px 0 #000, inset 2px 2px 1px rgba(0, 0, 0, 0.3);
   }
   
-  /* MAIN IS FLEXED IN NORMAL FLOW */
   main {
     flex: 1 1 auto;
     width: 100%;
     margin: 0 auto;
   }
   
-  /* FOOTER IN NORMAL FLOW */
+
   footer {
     flex: 0 0 auto;
     width: 100%;
@@ -217,22 +216,25 @@
   }
   
   table {
+    max-width: 700px;
     width: 100%;
+    margin: 0 auto 2rem;
     border-collapse: collapse;
-    margin: var(--space-md) 0;
   }
   
-  table thead {
+  th,
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #333;
+    text-align: left;
+  }
+  
+  thead {
     background-color: var(--clr-bg-alt);
   }
   
-  table th,
-  table td {
-    padding: var(--space-sm) var(--space-md);
-    border-bottom: 1px solid #333;
+  tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
   
-  table tr:hover {
-    background-color: rgba(255, 7, 58, 0.1);
-  }
   

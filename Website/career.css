@@ -1,0 +1,32 @@
+.three-column-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  
+  .column {
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 250px;
+    background-color: var(--clr-bg-alt);
+    padding: 1rem;
+    padding-left: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 1 1 calc(50% - 1rem);
+      min-width: 200px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .column {
+      flex: 1 1 100%;
+      min-width: auto;
+    }
+  }
+  
