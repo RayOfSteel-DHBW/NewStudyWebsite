@@ -1,249 +1,238 @@
-/* base.css */
-body {
-    background: 
-      radial-gradient(
-        circle at 50% 61%, 
-        rgba(77, 2, 17, 0.1) 0%, 
-        rgba(0, 0, 0, 0.8) 20%,
-        rgba(99, 4, 23, 0.200) 130%
-      ),
-      var(--clr-bg);
+:root {
+    --clr-bg: #0D0D0D;
+    --clr-bg-alt: #1A1A1A;
+    --clr-primary-neon: #FF073A;
+    --clr-secondary-neon: #00FFFF;
+    --clr-text: #F2F2F2;
+    --font-heading: "Orbitron", sans-serif;
+    --font-body: "Open Sans", sans-serif;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --transition-speed: 0.3s;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    
+    background: radial-gradient(
+        circle at 50% 61%,
+        rgba(77, 2, 17, 0.1) 0%,
+        rgba(0, 0, 0, 0.8) 20%,
+        rgba(99, 4, 23, 0.2) 130%
+      ),
+      var(--clr-bg);
+    color: var(--clr-text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.5;
   }
-
-:root {
-  --clr-bg: #0D0D0D;         
-  --clr-bg-alt: #1A1A1A;    
-  --clr-primary-neon: #FF073A; 
-  --clr-secondary-neon: #00FFFF; 
-  --clr-text: #F2F2F2;
-
-  /* Fonts */
-  --font-heading: "Orbitron", sans-serif;
-  --font-body: "Open Sans", sans-serif;
-
-  /* Spacing scales (optional) */
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
-
-  /* Transition speed for hover/focus */
-  --transition-speed: 0.3s;
-}
-
-/* 2) Global Resets & Base
-   ----------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  background-color: var(--clr-bg);
-  color: var(--clr-text);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-html {
-    max-height: 100vh;
-}
-
-/* 3) Typography
-   ----------------------------------------- */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  color: var(--clr-text);
-  body {
-    background: linear-gradient(
-      to top, 
-      var(--clr-bg), 
-      var(--clr-bg-alt)
-    );
-  }letter-spacing: 1px;
-  margin-bottom: var(--space-md);
-}
-
-/* Example specialized heading styles (optional) */
-h1 {
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  text-shadow: 0 0 8px var(--clr-primary-neon);
-}
-
-h2 {
-  font-size: 2rem;
-  text-shadow: 0 0 5px var(--clr-secondary-neon);
-}
-
-h3 {
-  font-size: 1.5rem;
-  text-shadow: 0 0 5px var(--clr-primary-neon);
-}
-
-/* Paragraph and text */
-p, li {
-  margin-bottom: var(--space-md);
-}
-
-/* 4) Links
-   ----------------------------------------- */
-a {
-  color: var(--clr-secondary-neon);
-  text-decoration: none;
-  transition: color var(--transition-speed), text-shadow var(--transition-speed);
-}
-
-a:hover {
-  color: var(--clr-primary-neon);
-  text-shadow: 0 0 5px var(--clr-primary-neon);
-}
-
-/* 5) Basic Layout Helpers
-   ----------------------------------------- */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--space-lg) 0;
-}
-
-.section {
-  padding: var(--space-lg) 0;
-  background-color: var(--clr-bg-alt); 
-  /* If you want an alternate background for each section */
-  margin-bottom: var(--space-lg);
-  border-radius: 4px;
-}
-
-.section .section-title {
-  margin-bottom: var(--space-md);
-  text-transform: uppercase;
-  text-align: center;
-}
-
-/* 6) Buttons
-   ----------------------------------------- */
-button {
-  background-color: var(--clr-primary-neon);
-  color: var(--clr-bg);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-family: var(--font-body);
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color var(--transition-speed),
-              box-shadow var(--transition-speed);
-}
-
-button:hover {
-  background-color: var(--clr-secondary-neon);
-  box-shadow: 0 0 8px var(--clr-secondary-neon);
-}
-.header-container {
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    margin-bottom: var(--space-md);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px var(--clr-primary-neon);
+  }
+  
+  h2 {
+    font-size: 2rem;
+    text-shadow: 0 0 5px var(--clr-secondary-neon);
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px var(--clr-primary-neon);
+  }
+  
+  p, li {
+    margin-bottom: var(--space-md);
+  }
+  
+  a {
+    color: var(--clr-secondary-neon);
+    text-decoration: none;
+    transition: color var(--transition-speed), text-shadow var(--transition-speed);
+  }
+  
+  a:hover {
+    color: var(--clr-primary-neon);
+    text-shadow: 0 0 5px var(--clr-primary-neon);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-lg) 0;
+  }
+  
+  .section {
+    padding: var(--space-lg) 0;
+    background-color: var(--clr-bg-alt);
+    margin-bottom: var(--space-lg);
+    border-radius: 4px;
+  }
+  
+  .section .section-title {
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  button {
+    background-color: var(--clr-primary-neon);
+    color: var(--clr-bg);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-body);
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  button:hover {
+    background-color: var(--clr-secondary-neon);
+    box-shadow: 0 0 8px var(--clr-secondary-neon);
+  }
+  
+  /* NORMAL FLOW LAYOUT */
+  header {
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-md);
+    background: var(--clr-bg);
+  }
+  
+  .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+  }
+  
+  .site-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    text-shadow: 0 0 8px var(--clr-primary-neon);
     margin: 0;
-    padding: 0;
-    width: 100%
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: var(--space-md) 0;
-}
-
-table thead {
-  background-color: var(--clr-bg-alt);
-}
-
-table th,
-table td {
-  padding: var(--space-sm) var(--space-md);
-  border-bottom: 1px solid #333;
-}
-
-table tr:hover {
-  background-color: rgba(255, 7, 58, 0.1); /* slight highlight in neon red */
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 var(--space-md);
-  z-index: 999;
-}
-
-main {
-  flex: 1 0 auto;
-  padding-top: 0;
-  margin-bottom: 0;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--clr-bg-alt);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  text-align: center;
-  color: gray;
-  padding: 1vh 1vw;
-}
-.nav-list {
-  display: flex;
-  margin: 0;
-  padding: 2px;
-  list-style: none;
-  background: var(--clr-bg);
-  border: 2px inset var(--clr-bg-alt);
-  border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
-}
-
-.nav-list li {
-  margin: 0;
-  flex: 1;
-}
-
-.nav-list a {
+  }
+  
+  #mobile-site-title {
+    display: none;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .site-title {
+      display: none;
+    }
+    #mobile-site-title {
+      display: block !important;
+    }
+  }
+  
+  @media screen and (min-width: 851px) {
+    #mobile-site-title {
+      display: none;
+    }
+    .site-title {
+      display: block;
+    }
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    margin-right: 1rem;
+    background: var(--clr-bg);
+    border: 2px inset var(--clr-bg-alt);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+  }
+  
+  .nav-list li {
+    margin: 0;
+    flex: 1;
+  }
+  
+  .nav-list a {
     min-width: 7vw;
-  display: block;
-  background-color: var(--clr-bg-alt);
-  color: var(--clr-secondary-neon);
-  padding: var(--space-sm) var(--space-md);
-  text-decoration: none;
-  text-align: center;
-  border: 1px solid var(--clr-bg);
-  box-shadow: 
-    2px 2px 0 #000,
-    inset 1px 1px 0px rgba(255, 255, 255, 0.1);
-  transition: all var(--transition-speed);
-}
-
-.nav-list a:hover {
-  color: var(--clr-secondary-neon);
-  transform: translate(1px, 1px);
-  box-shadow: 
-    1px 1px 0 #000,
-    inset 2px 2px 1px rgba(0, 0, 0, 0.3);
-}
+    display: block;
+    background-color: var(--clr-bg-alt);
+    color: var(--clr-secondary-neon);
+    padding: var(--space-sm) var(--space-md);
+    text-align: center;
+    border: 1px solid var(--clr-bg);
+    box-shadow: 2px 2px 0 #000, inset 1px 1px 0px rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-speed);
+  }
+  
+  .nav-list a:hover {
+    color: var(--clr-secondary-neon);
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 #000, inset 2px 2px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* MAIN IS FLEXED IN NORMAL FLOW */
+  main {
+    flex: 1 1 auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* FOOTER IN NORMAL FLOW */
+  footer {
+    flex: 0 0 auto;
+    width: 100%;
+    background-color: var(--clr-bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: gray;
+    padding: 1vh 1vw;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-md) 0;
+  }
+  
+  table thead {
+    background-color: var(--clr-bg-alt);
+  }
+  
+  table th,
+  table td {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid #333;
+  }
+  
+  table tr:hover {
+    background-color: rgba(255, 7, 58, 0.1);
+  }
+  

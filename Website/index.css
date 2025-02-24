@@ -1,12 +1,5 @@
-html {
-    max-height: 100vh;
-}
-
-
 .hero-section {
-    margin-top: 4rem;
     text-align: center;
-    max-height: 61vh;
 }
 
 .hero-container {
@@ -15,7 +8,6 @@ html {
     align-items: center;
 }
 
-/* Style for the small title above the image */
 .hero-title h2 {
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -34,8 +26,7 @@ html {
     transition: transform 0.3s ease-in-out, filter 0.4s;
     margin-bottom: 1rem;
     filter: drop-shadow(0 0 5px var(--clr-secondary-neon));
-    flex: 1 1 30%;
-    max-height: 61vh;
+    flex: 1 1 0%;
 }
 
 .hero-skull:hover {
@@ -43,21 +34,6 @@ html {
     filter: drop-shadow(0 0 15px var(--clr-primary-neon));
 }
 
-
-.site-title {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    text-transform: uppercase;
-    text-shadow: 0 0 8px var(--clr-primary-neon);
-    margin: 1rem 0;
-}
-
-@media screen and (orientation: portrait) {
-    .site-title {
-        display: none;
-    }
-    
-}
 
 .tagline {
     font-size: 1rem;
